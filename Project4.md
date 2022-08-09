@@ -1,6 +1,6 @@
-` # Task --  implement a simple Book Register web form using MEAN stack. `
+* Task --  implement a simple Book Register web form using MEAN stack. `
 
-` # Step 1: first Update, upgrade ubuntu Instance created and add certs then Install NodeJs` 
+##  Step 1: first Update, upgrade ubuntu Instance created and add certs then Install NodeJs` 
 
 ` sudo apt update && sudo apt upgrade -y ` 
 
@@ -10,12 +10,12 @@
 
 ` sudo apt install -y nodejs  -->> This installs both nodejs and npm ` 
 
-` # version of nodejs and npm is shown below `
+* version of nodejs and npm is shown below `
 
 ![NodeJS and npm version running](./images/Project-4-image-2-NodeJS-npm-version.PNG)
 
 
-` # Step 2: Installing MongoDB and adding book records to MongoDB that contain book name, isbn number, author, and number of pages. mages/WebConsole.gif `
+##  Step 2: Installing MongoDB and adding book records to MongoDB that contain book name, isbn number, author, and number of pages. mages/WebConsole.gif 
 
 ` sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6 `
 
@@ -24,18 +24,18 @@
 
 ` sudo apt install -y mongodb `
 
-` # Start The server and Verify that the service is up and running `
+* Start The server and Verify that the service is up and running `
 
 ` sudo service mongodb start && sudo systemctl status mongodb ` 
 
 ![Status of MongoDB running](./images/Project-4-image-1-MongoDB-status.PNG)
 
 
-` # Install body-parser package `
+*  Install body-parser package `
 
 ` sudo npm install body-parser ` 
 
-` # Create a folder named ‘Books’ change into Books and in the Books directory, Initialize npm project ` 
+* Create a folder named ‘Books’ change into Books and in the Books directory, Initialize npm project ` 
 
 ` mkdir Books && cd Books ` 
 
@@ -44,7 +44,7 @@
 ![npm init image](./images/Project-4-image-3-npm-init.PNG)
 
 
-` # Add a file to Books dir named server.js, and paste the web server code below into the server.js file `
+* Add a file to Books dir named server.js, and paste the web server code below into the server.js file `
 
 ` vi server.js `
 
@@ -59,11 +59,11 @@ app.listen(app.get('port'), function() {
     console.log('Server up: http://localhost:' + app.get('port'));
 }); `
 
-` Step 3: Install Express and set up routes to the server `
+##  Step 3: Install Express and set up routes to the server `
 
 ` sudo npm install express mongoose ` 
 
-` # In ‘Books’ dir, create a dir named apps and create a file named routes.js and paste the below ` 
+*  In ‘Books’ dir, create a dir named apps and create a file named routes.js and paste the below ` 
 
 ` mkdir apps && cd apps && vi routes.js `
 
@@ -107,7 +107,7 @@ module.exports = function(app) {
 }; `
 
 
-` # In ‘apps’ dir, create a dir named models and create a file named book.js and paste the below ` 
+* In ‘apps’ dir, create a dir named models and create a file named book.js and paste the below ` 
 
 ` mkdir models && cd models && vi books.js `
 
@@ -127,9 +127,9 @@ var Book = mongoose.model('Book', bookSchema);
 module.exports = mongoose.model('Book', bookSchema); `
 
 
-` Step 4 – Access the routes with AngularJS `
+# Step 4 – Access the routes with AngularJS `
 
-` # change dir to "Books", create a dir public, cd into public and create a file name script.js and paste the below `  
+* change dir to "Books", create a dir public, cd into public and create a file name script.js and paste the below `  
 
 ` mkdir public && cd public && vi script.js `
 
@@ -172,7 +172,7 @@ app.controller('myCtrl', function($scope, $http) {
 }); `
 
 
-` # in public dir, create a file named index.html  and paste the below `
+* in public dir, create a file named index.html  and paste the below `
 
 
 ` vi index.html `
@@ -230,7 +230,7 @@ app.controller('myCtrl', function($scope, $http) {
 </html>
 ` 
 
-` # change dir back to "Books" and Start the server by running the command below `
+*  change dir back to "Books" and Start the server by running the command below `
 
 
 ` node server.js ` 
